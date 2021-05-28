@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const { v4: uuidv4, validate } = require("uuid");
 // const { isUuid } = require("uuidv4");
 
@@ -14,7 +15,7 @@ const app = express();
  *
  *
  */
-
+app.use(cors());
 app.use(express.json());
 //acima é utilizado para o express reconhecer JSON
 
